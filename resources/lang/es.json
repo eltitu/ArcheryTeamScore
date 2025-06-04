@@ -1,0 +1,19 @@
+{
+    "Archers": "Arqueros",
+    "Archer": "Arquero",
+    "New Archer": "Añadir arquero",
+    "Competitions": "Competiciones",
+    "New Competition": "Nueva Competición",
+    "Name": "Nombre",
+    "License": "Licencia",
+    "Division": "División",
+    "Status": "Estado",
+    "Active": "Activo",
+    "Inactive": "Inactivo",
+    "Ok": "Aceptar",
+    "Cancel": "Cancelar",
+    "View": "Ver",
+    "Edit": "Editar",
+    "Delete": "Eliminar",
+    "Please, confirm you want to delete archer :archer": "Por favor, confirma que quieres eliminar al arquero :archer"
+}

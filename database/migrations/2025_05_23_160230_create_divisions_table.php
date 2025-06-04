@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateArchersTable extends Migration
+class CreateDivisionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateArchersTable extends Migration
      */
     public function up()
     {
-        Schema::create('archers', function (Blueprint $table) {
+        Schema::create('divisions', function (Blueprint $table) {
             $table->id();
-            $table->integer('userid');
             $table->string('name');
-            $table->string('license');
-            $table->integer('division');
-            $table->integer('status');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class CreateArchersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('archers');
+        Schema::dropIfExists('divisions');
     }
 }

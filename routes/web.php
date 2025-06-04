@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArcherController;
+use App\Http\Controllers\CompetitionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,14 +23,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/arqueros', function () {
-    return view('arqueros');
-});
+Route::get('/archers', [ArcherController::class, 'index'])->name('archers.index');
+Route::get('archers/create', [ArcherController::class, 'create'])->name('archers.create');
+Route::get('/archers/{archer}', [ArcherController::class, 'show'])->name('archers.show');
+Route::post('/archers', [ArcherController::class ,'store'])->name('archers.store');
 
-Route::get('/competiciones', function () {
-    return view('competiciones');
-});
-
-Route::get('/nueva-competicion', function () {
-    return view('nueva-competicion');
-});
+Route::get('/competitions', [CompetitionController::class, 'index'])->name('competitions.index');
+Route::get('/competitions/create', [CompetitionController::class, 'create'])->name('competitions.create');

@@ -1,20 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Archery Team Score</title>
-</head>
+@section('title', 'Archery Team Score')
 
-<body>
-    <h1>Archery Team Score</h1>
-    <p>By Titu</p>
-    <hr />
-    <p><a href="{{ url('/arqueros') }}">Arqueros</a></p>
-    <p><a href="{{ url('/competiciones') }}">Competiciones</a></p>
-    <p><a href="{{ url('/nueva-competicion') }}">Nueva competición</a></p>
-</body>
-
-</html>
+@section('content')
+    <p><a href="{{ route('competitions.create') }}">{{ __('New Competition') }}</a></p>
+    <p><a href="{{ route('competitions.index') }}">{{ __('Competitions') }}</a></p>
+    <p><a href="{{ route('archers.index') }}">{{ __('Archers') }}</a></p>
+@endsection
