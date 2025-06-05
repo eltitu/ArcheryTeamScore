@@ -15,12 +15,12 @@
     <header>
         <div class="float-right"><a href="{{ url('/') }}"><img
                     src="{{ config('app.url') }}:8000/storage/img/logo180.png" alt="logo" /></a></div>
-        <h1 class="text-4xl mt-6"><a href="{{ url('/') }}">Archery Team Score</a></h1>
+        <h1 class="text-4xl mt-6 text-lime-800"><a href="{{ url('/') }}">Archery Team Score</a></h1>
         <p class="mb-16 mt-2 text-xs">By Titu</p>
-        <hr class="mb-6" />
+        <hr class="mb-6 text-lime-800" />
     </header>
 
-    <div class="pt-5">
+    <div class="p-8">
         @yield('content')
     </div>
 </body>
