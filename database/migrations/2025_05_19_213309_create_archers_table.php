@@ -15,10 +15,11 @@ class CreateArchersTable extends Migration
     {
         Schema::create('archers', function (Blueprint $table) {
             $table->id();
-            $table->integer('userid');
+            $table->integer('user_id');
             $table->string('name');
+            $table->string('surname');
             $table->string('license');
-            $table->integer('division');
+            $table->integer('division_id');
             $table->integer('status');
             $table->timestamps();
         });

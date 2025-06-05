@@ -27,6 +27,9 @@ Route::get('/archers', [ArcherController::class, 'index'])->name('archers.index'
 Route::get('archers/create', [ArcherController::class, 'create'])->name('archers.create');
 Route::get('/archers/{archer}', [ArcherController::class, 'show'])->name('archers.show');
 Route::post('/archers', [ArcherController::class ,'store'])->name('archers.store');
+Route::get('/archers/{archer}/edit', [ArcherController::class, 'edit'])->name('archers.edit');
+Route::put('/archers/{archer}', [ArcherController::class, 'update'])->name('archers.update');
+Route::delete('/archers/{archer}', [ArcherController::class, 'destroy'])->name('archers.destroy');
 
 Route::get('/competitions', [CompetitionController::class, 'index'])->name('competitions.index');
 Route::get('/competitions/create', [CompetitionController::class, 'create'])->name('competitions.create');

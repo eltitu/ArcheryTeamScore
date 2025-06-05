@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Archers extends Model
 {
     use HasFactory;
+
+    public function division() {
+        return $this->belongsTo(Divisions::class);
+    }
 }

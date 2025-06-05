@@ -5,6 +5,7 @@
     "Competitions": "Competiciones",
     "New Competition": "Nueva Competición",
     "Name": "Nombre",
+    "Surname": "Apellidos",
     "License": "Licencia",
     "Division": "División",
     "Status": "Estado",
@@ -15,5 +16,7 @@
     "View": "Ver",
     "Edit": "Editar",
     "Delete": "Eliminar",
+    "deleted": "eliminado",
+    "Deleted archer": "Arquero eliminado",
     "Please, confirm you want to delete archer :archer": "Por favor, confirma que quieres eliminar al arquero :archer"
 }

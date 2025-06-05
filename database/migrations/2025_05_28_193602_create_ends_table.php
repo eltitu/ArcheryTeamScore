@@ -15,7 +15,7 @@ class CreateEndsTable extends Migration
     {
         Schema::create('ends', function (Blueprint $table) {
             $table->id();
-            $table->integer('matchid');
+            $table->integer('match_id');
             $table->integer('end_number');
             $table->integer('opponent_score');
             $table->timestamps();

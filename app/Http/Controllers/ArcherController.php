@@ -10,7 +10,7 @@ class ArcherController extends Controller
 {
     public function index()
     {
-        $archers = Archers::all(); //->where('status', 1);
+        $archers = Archers::with('division')->where('user_id', 1)->get();
         return view('archers', compact('archers'));
     }
 
@@ -21,19 +21,46 @@ class ArcherController extends Controller
 
     public function store(Request $request) {
         $archer = new Archers();
-        $archer->userid = 1;
+        $archer->user_id = 1;
         $archer->name = $request->name;
+        $archer->surname = $request->surname;
         $archer->license = $request->license;
-        $archer->division = $request->division;
+        $archer->division_id = $request->division;
         $archer->status = $request->status;
         $archer->save();
 
-        return redirect()->route('archers.index');
+        return redirect()->route('archers.show', $archer);
     }
 
     public function show($id) {
         $archer = Archers::find($id);
-        $division = Divisions::find($archer->division);
-        return view('archers.show', compact('archer', 'division'));
+        return view('archers.show', compact('archer'));
+    }
+
+    public function edit($id) {
+        $archer = Archers::find($id);
+        $divisions = Divisions::all();
+        return view('archers.edit', compact('archer', 'divisions'));
+    }
+
+    public function update(Request $request, $id) {
+        $archer = Archers::find($id);
+
+        $archer->name = $request->name;
+        $archer->surname = $request->surname;
+        $archer->license = $request->license;
+        $archer->division_id = $request->division;
+        $archer->status = $request->status;
+        $archer->save();
+
+        return redirect()->route('archers.show', $archer);
+    }
+
+    public function destroy($id) {
+        $archer = Archers::find($id);
+        $name = $archer->name;
+        $archer->delete();
+
+        return view('archers.deleted', compact('name'));
     }
 }

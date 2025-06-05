@@ -1,13 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-    <h2 class="pb-5 text-xl">{{ __('Archer') }}: {{ $archer->name }}</h2>
+
+    <h2  class="pb-5 text-xl text-lime-800">{{ __('Archer') }}: {{ $archer->name }}</h2>
+    
     <div class="flex">
         <div class="w-1/6">
             {{ __('Name') }}:
         </div>
         <div class="w-5/6">
             {{ $archer->name }}
+        </div>
+    </div>
+
+    <div class="flex">
+        <div class="w-1/6">
+            {{ __('Surname') }}:
+        </div>
+        <div class="w-5/6">
+            {{ $archer->surname }}
         </div>
     </div>
 
@@ -25,7 +36,7 @@
             {{ __('Division') }}:
         </div>
         <div class="w-5/6">
-            {{ $division->name }}
+            {{ $archer->division->name }}
         </div>
     </div>
 
