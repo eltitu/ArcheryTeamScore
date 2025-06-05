@@ -10,7 +10,7 @@
     <div class="pt-10">
         <a href="{{ route('archers.index') }}">
             <button
-                class="border border-green-500 bg-green-500 text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-green-700 focus:outline-none focus:shadow-outline">
+                class="border border-lime-800 bg-lime-800 text-white rounded-md px-4 py-2 transition duration-500 ease select-none hover:bg-lime-500 focus:outline-none focus:shadow-outline">
                 {{ __('Ok') }}
             </button>
         </a>
