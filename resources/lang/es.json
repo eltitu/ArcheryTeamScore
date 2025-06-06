@@ -3,6 +3,7 @@
     "Archer": "Arquero",
     "New Archer": "Añadir arquero",
     "Competitions": "Competiciones",
+    "Competition": "Competición",
     "New Competition": "Nueva Competición",
     "Name": "Nombre",
     "Surname": "Apellidos",
@@ -18,5 +19,10 @@
     "Delete": "Eliminar",
     "deleted": "eliminado",
     "Deleted archer": "Arquero eliminado",
-    "Please, confirm you want to delete archer :archer": "Por favor, confirma que quieres eliminar al arquero :archer"
+    "Please, confirm you want to delete archer :archer": "Por favor, confirma que quieres eliminar al arquero :archer",
+    "Date": "Fecha",
+    "Session": "Jornada",
+    "Competition :competition deleted": "Competición :competition eliminada",
+    "Deleted competition": "Competición eliminada",
+    "Please, confirm you want to delete competition :competition": "Por favor, confirma que quieres eliminar la competición :competition"
 }

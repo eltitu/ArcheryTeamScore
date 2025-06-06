@@ -73,7 +73,7 @@
                             {{ $archer->status == 0 ? __('Inactive') : __('Active') }}
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-right text-xl font-medium">
-                            <a href="{{ route('archers.show', $archer->id) }}" class="text-lime-800 hover:text-lime-500">
+                            <a href="{{ route('archers.show', $archer) }}" class="text-lime-800 hover:text-lime-500">
                                 <i class="far fa-eye"></i>
                             </a>
                         </td>
