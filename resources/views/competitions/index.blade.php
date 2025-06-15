@@ -71,6 +71,12 @@
                                 </button>
                             </form>
                         </td>
+
+                        <td class="px-6 py-4 whitespace-nowrap text-right text-xl font-medium">
+                            <a href="{{ route('competitions.display', $competition) }}" class="text-lime-800 hover:text-lime-500">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

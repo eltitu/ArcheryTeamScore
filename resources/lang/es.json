@@ -24,5 +24,14 @@
     "Session": "Jornada",
     "Competition :competition deleted": "Competición :competition eliminada",
     "Deleted competition": "Competición eliminada",
-    "Please, confirm you want to delete competition :competition": "Por favor, confirma que quieres eliminar la competición :competition"
+    "Please, confirm you want to delete competition :competition": "Por favor, confirma que quieres eliminar la competición :competition",
+    "New Match": "Añadir enfrentamiento",
+    "Opponent": "Rival",
+    "Select an archer": "Selecciona un arquero",
+    "End Total": "Total Entrada",
+    "Opponent Points": "Puntos rival",
+    "Set Points": "Puntos set",
+    "Total Points": "Total puntos",
+    "Total Set Points": "Total puntos set",
+    "End": "Entrada"
 }

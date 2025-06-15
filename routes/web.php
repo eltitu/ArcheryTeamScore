@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArcherController;
 use App\Http\Controllers\CompetitionController;
+use App\Http\Controllers\MatchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,5 +33,9 @@ Route::get('/', function () {
 // Route::delete('/archers/{archer}', [ArcherController::class, 'destroy'])->name('archers.destroy');
 
 Route::resource('archers', ArcherController::class);
-Route::resource('competitions', CompetitionController::class);
 
+Route::resource('competitions', CompetitionController::class);
+Route::get('/competitions/{competition}/display', [CompetitionController::class, 'display'])->name('competitions.display');
+
+Route::get('/competitions/{competition}/matches/create', [MatchController::class, 'create'])->name('matches.create');
+Route::post('/competitions/{competition}/matches', [MatchController::class ,'store'])->name('matches.store');
