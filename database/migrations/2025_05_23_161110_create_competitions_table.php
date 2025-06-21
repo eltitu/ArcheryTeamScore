@@ -15,7 +15,10 @@ class CreateCompetitionsTable extends Migration
     {
         Schema::create('competitions', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
+            $table->foreignId('user_id')
+                ->constrained()
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->string('name');
             $table->date('date');
             $table->integer('session');

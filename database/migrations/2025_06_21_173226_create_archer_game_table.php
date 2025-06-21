@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEndsTable extends Migration
+class CreateArcherGameTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,16 @@ class CreateEndsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ends', function (Blueprint $table) {
+        Schema::create('archer_game', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('archer_id')
+                ->constrained()
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->foreignId('game_id')
                 ->constrained()
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->integer('end_number');
-            $table->integer('opponent_score');
             $table->timestamps();
         });
     }
@@ -32,6 +34,6 @@ class CreateEndsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ends');
+        Schema::dropIfExists('archer_game');
     }
 }

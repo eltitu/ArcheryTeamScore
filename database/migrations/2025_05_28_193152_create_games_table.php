@@ -13,14 +13,14 @@ class CreateMatchesTable extends Migration
      */
     public function up()
     {
-        Schema::create('matches', function (Blueprint $table) {
+        Schema::create('games', function (Blueprint $table) {
             $table->id();
-            $table->integer('competition_id');
-            $table->integer('match_number');
+            $table->foreignId('competition_id')
+                ->constrained()
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->string('opponent');
-            $table->integer('archer1');
-            $table->integer('archer2');
-            $table->integer('archer3');
+            $table->integer('game_number');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class CreateMatchesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('matches');
+        Schema::dropIfExists('games');
     }
 }

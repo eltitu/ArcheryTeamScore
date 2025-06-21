@@ -15,11 +15,18 @@ class CreateArchersTable extends Migration
     {
         Schema::create('archers', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
+            $table->foreignId('user_id')
+                ->constrained()
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->string('name');
             $table->string('surname');
             $table->string('license');
-            $table->integer('division_id');
+            $table->foreignId('division_id')
+                ->constrained()
+                ->onDelete('set null')
+                ->onUpdate('cascade')
+                ->nullable();
             $table->integer('status');
             $table->timestamps();
         });

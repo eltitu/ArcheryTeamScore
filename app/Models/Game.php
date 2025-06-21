@@ -14,6 +14,10 @@ class Game extends Model
     }
 
     public function archers() {
-        return $this->hasMany(Archer::class);
+        return $this->belongsToMany(Archer::class);
+    }
+
+    public function ends() {
+        return $this->hasMany(End::class);
     }
 }
